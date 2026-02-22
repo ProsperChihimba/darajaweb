@@ -60,7 +60,7 @@ export default function SolutionsSection() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: isSmallScreen ? "top -1%" : "top -23%",
+          start: isSmallScreen ? "top 4%" : "top -20%",
           end: `+=${panels.length * 100}%`,
           scrub: true,
           pin: true,
