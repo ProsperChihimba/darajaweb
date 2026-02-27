@@ -46,7 +46,7 @@ const solutions = [
 
 const SETTINGS = {
   // --- Scroll pacing ---
-  scrollPerPanelVh: 300,   // vh of scroll distance dedicated to each panel
+  scrollPerPanelVh: 500,   // vh of scroll distance dedicated to each panel
   scrub: 1,                // smoothing lag on scrub (seconds); 0 = instant
 
   // --- Header ---
@@ -162,7 +162,7 @@ export default function SolutionsSection() {
                   opacity: 0,
                   y: panelOffsetOut + headerShift,
                   zIndex: 0,
-                  duration: 3,
+                  duration: transitionDuration,
                   ease: "power2.in",
                 },
                 startAt,
