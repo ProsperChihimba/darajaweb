@@ -60,6 +60,7 @@ const SETTINGS = {
   // --- Panel motion ---
   panelOffsetIn: 40,       // px panels slide up from on entry
   panelOffsetOut: -20,     // px panels slide to on exit
+  
 };
 
 export default function SolutionsSection() {
