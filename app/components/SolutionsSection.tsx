@@ -55,11 +55,11 @@ const SETTINGS = {
 
   // --- Panel transitions ---
   transitionDuration: 1,   // time units for fade-in / fade-out animation
-  holdDuration: 3,         // time units each panel stays fully visible
+  holdDuration: 9,         // time units each panel stays fully visible
 
   // --- Panel motion ---
   panelOffsetIn: 40,       // px panels slide up from on entry
-  panelOffsetOut: -20,     // px panels slide to on exit
+  panelOffsetOut: 0,     // px panels slide to on exit
 
 };
 
