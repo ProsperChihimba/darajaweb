@@ -191,7 +191,7 @@ export default function SolutionsSection() {
       <div className="mx-auto w-full lg:max-w-295 px-6">
         <h2
           ref={headerRef}
-          className="mx-auto max-w-3xl lg:mb-9 text-center text-[2.4rem] max-[900px]:text-[1.7rem] max-[900px]:mb-10 font-bold leading-[1.05] text-[#2c2c2c]"
+          className="mx-auto max-w-3xl lg:mb-9 text-center text-[2.4rem] max-[900px]:text-[1.7rem] max-[900px]:mb-20 font-bold leading-[1.05] text-[#2c2c2c]"
         >
           Solving People Management Challenges for MENA
         </h2>
