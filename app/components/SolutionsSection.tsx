@@ -59,13 +59,12 @@ const SETTINGS = {
 
   // --- Panel motion ---
   panelOffsetIn: 40,       // px panels slide up from on entry
-  panelOffsetOut: 0,     // px panels slide to on exit
+  panelOffsetOut: -20,     // px panels slide to on exit
 
 };
 
 export default function SolutionsSection() {
   const sectionRef = useRef<HTMLElement | null>(null);
-  const pinRef = useRef<HTMLDivElement | null>(null);
   const headerRef = useRef<HTMLHeadingElement | null>(null);
 
   useGSAP(
@@ -111,12 +110,12 @@ export default function SolutionsSection() {
 
           const tl = gsap.timeline({
             scrollTrigger: {
-              trigger: pinRef.current,
+              trigger: sectionRef.current,
               start: "top top",
               // Total scroll = number of panels × vh per panel
               end: `+=${panels.length * scrollPerPanelVh}vh`,
               scrub,
-              pin: pinRef.current,
+              pin: true,
               invalidateOnRefresh: true,
             },
           });
@@ -184,50 +183,49 @@ export default function SolutionsSection() {
   );
 
   return (
-    <section ref={sectionRef} id="solutions" className="">
-      <div className="lg:pb-24  pt-0">
+    <section
+      ref={sectionRef}
+      id="solutions"
+      className=" h-screen bg-white lg:pb-0 pt-0"
+    >
+      <div className="mx-auto w-full lg:max-w-295 px-6">
+        <h2
+          ref={headerRef}
+          className="mx-auto max-w-3xl lg:mb-9 text-center text-[2.4rem] max-[900px]:text-[1.7rem] max-[900px]:mb-16 font-bold leading-[1.05] text-[#2c2c2c]"
+        >
+          Solving People Management Challenges for MENA
+        </h2>
 
-        <div ref={pinRef} className="h-screen">
-          <div className="mx-auto w-full lg:max-w-295 px-6">
-            <h2
-              ref={headerRef}
-              className="mx-auto max-w-3xl lg:mb-9 text-center text-[2.4rem] max-[900px]:text-[1.7rem] max-[900px]:mb-16 font-bold leading-[1.05] text-[#2c2c2c]"
+        <div
+          className="relative  -mt-14 lg:mt-0"
+          style={{ minHeight: "clamp(520px, 65vh, 720px)" }}
+        >
+          {solutions.map((solution) => (
+            <article
+              key={solution.title}
+              className="solution-panel absolute inset-0 grid items-center gap-4 lg:gap-8  max-[900px]:flex max-[900px]:flex-col-reverse lg:grid-cols-[1.05fr_1fr]"
             >
-              Solving People Management Challenges for MENA
-            </h2>
-
-            <div
-              className="relative  -mt-14 lg:mt-0"
-              style={{ minHeight: "clamp(520px, 65vh, 720px)" }}
-            >
-              {solutions.map((solution) => (
-                <article
-                  key={solution.title}
-                  className="solution-panel absolute inset-0 grid items-center gap-4 lg:gap-8  max-[900px]:flex max-[900px]:flex-col-reverse lg:grid-cols-[1.05fr_1fr]"
-                >
-                  <div className="lg:px-8">
-                    <h3 className="text-[2.2rem] max-[900px]:text-[1.5rem] font-bold text-[#2c2c2c]">
-                      {solution.title}
-                    </h3>
-                    <p className="lg:mt-4 lg:text-[1rem] text-sm leading-[1.7] text-[#4a4a4a]">
-                      {solution.description}
-                    </p>
-                  </div>
-                  <div className="lg:p-8">
-                    <div className="overflow-hidden">
-                      <Image
-                        src={solution.image}
-                        alt={solution.title}
-                        width={900}
-                        height={560}
-                        className="h-auto w-full object-contain"
-                      />
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
+              <div className="lg:px-8">
+                <h3 className="text-[2.2rem] max-[900px]:text-[1.5rem] font-bold text-[#2c2c2c]">
+                  {solution.title}
+                </h3>
+                <p className="lg:mt-4 lg:text-[1rem] text-sm leading-[1.7] text-[#4a4a4a]">
+                  {solution.description}
+                </p>
+              </div>
+              <div className="lg:p-8">
+                <div className="overflow-hidden">
+                  <Image
+                    src={solution.image}
+                    alt={solution.title}
+                    width={900}
+                    height={560}
+                    className="h-auto w-full object-contain"
+                  />
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
