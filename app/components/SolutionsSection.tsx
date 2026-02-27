@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const solutions = [
   {
-    title: "Multi-Country, Multi-Entity Compliance",
+    title: "Multi-Country, Multi-Entity",
     description:
       "Stay compliant across borders with HRIS and payroll workflows tailored to local labor laws, leave policies, and regulations, ensuring seamless operations across offices and entities.",
     image: "/assets/images/image5.webp",
@@ -197,7 +197,7 @@ export default function SolutionsSection() {
         </h2>
 
         <div
-          className="relative "
+          className="relative  -mt-14 lg:mt-0"
           style={{ minHeight: "clamp(520px, 65vh, 720px)" }}
         >
           {solutions.map((solution) => (
@@ -209,7 +209,7 @@ export default function SolutionsSection() {
                 <h3 className="text-[2.2rem] max-[900px]:text-[1.5rem] font-bold text-[#2c2c2c]">
                   {solution.title}
                 </h3>
-                <p className="lg:mt-4 text-[1rem] leading-[1.7] text-[#4a4a4a]">
+                <p className="lg:mt-4 lg:text-[1rem] text-sm leading-[1.7] text-[#4a4a4a]">
                   {solution.description}
                 </p>
               </div>
