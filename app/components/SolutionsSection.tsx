@@ -109,7 +109,7 @@ export default function SolutionsSection() {
       id="solutions"
       className="bg-white py-16 lg:pb-24 lg:pt-0"
     >
-      <div className="mx-auto w-full max-w-295 px-6">
+      <div className="mx-auto w-full lg:max-w-295 px-6">
         <h2
           ref={headerRef}
           className="mx-auto max-w-3xl text-center text-[2.4rem] max-[900px]:text-[1.7rem] max-[900px]:mb-10 font-bold leading-[1.05] text-[#2c2c2c]"
@@ -118,13 +118,13 @@ export default function SolutionsSection() {
         </h2>
 
         <div
-          className="relative  overflow-hidden rounded-4xl"
+          className="relative  overflow-hidden "
           style={{ minHeight: "clamp(520px, 65vh, 720px)" }}
         >
           {solutions.map((solution) => (
             <article
               key={solution.title}
-              className="solution-panel absolute inset-0 grid items-center gap-8 rounded-4xl bg-white max-[900px]:flex max-[900px]:flex-col-reverse lg:grid-cols-[1.05fr_1fr]"
+              className="solution-panel  absolute inset-0 grid items-center gap-8  bg-white max-[900px]:flex max-[900px]:flex-col-reverse lg:grid-cols-[1.05fr_1fr]"
             >
               <div className=" lg:px-8">
                 <h3 className="text-[clamp(1.6rem,2.8vw,2.2rem)] font-bold text-[#2c2c2c]">
@@ -134,8 +134,8 @@ export default function SolutionsSection() {
                   {solution.description}
                 </p>
               </div>
-              <div className="rounded-[28px] lg:p-8">
-                <div className="overflow-hidden rounded-[22px] bg-white/70">
+              <div className=" lg:p-8">
+                <div className="overflow-hidden">
                   <Image
                     src={solution.image}
                     alt={solution.title}
