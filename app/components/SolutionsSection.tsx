@@ -51,7 +51,7 @@ const SETTINGS = {
 
   // --- Header ---
   headerFade: 0.5,         // how quickly the heading fades out (timeline units)
-  headerShift: -48,        // px the panels lift up as header disappears
+  headerShift: 0,        // px the panels lift up as header disappears
 
   // --- Panel transitions ---
   transitionDuration: 1,   // time units for fade-in / fade-out animation
@@ -186,30 +186,30 @@ export default function SolutionsSection() {
     <section
       ref={sectionRef}
       id="solutions"
-      className="bg-sky-300 p-2 h-screen  lg:pb-24 lg:pt-0"
+      className=" h-screen bg-white lg:pb-24 pt-0"
     >
-      <div className="mx-auto bg-amber-400 w-full lg:max-w-295 px-6">
+      <div className="mx-auto w-full lg:max-w-295 px-6">
         <h2
           ref={headerRef}
-          className="mx-auto max-w-3xl lg:mb-9 text-center text-[2.4rem] max-[900px]:text-[1.7rem] max-[900px]:mb-9 font-bold leading-[1.05] text-[#2c2c2c]"
+          className="mx-auto max-w-3xl lg:mb-9 text-center text-[2.4rem] max-[900px]:text-[1.7rem] max-[900px]:mb-16 font-bold leading-[1.05] text-[#2c2c2c]"
         >
           Solving People Management Challenges for MENA
         </h2>
 
         <div
-          className="relative bg-neutral-600 px-2"
+          className="relative "
           style={{ minHeight: "clamp(520px, 65vh, 720px)" }}
         >
           {solutions.map((solution) => (
             <article
               key={solution.title}
-              className="solution-panel bg-violet-500 px-2 absolute inset-0 grid items-center gap-8  max-[900px]:flex max-[900px]:flex-col-reverse lg:grid-cols-[1.05fr_1fr]"
+              className="solution-panel absolute inset-0 grid items-center gap-4 lg:gap-8  max-[900px]:flex max-[900px]:flex-col-reverse lg:grid-cols-[1.05fr_1fr]"
             >
               <div className="lg:px-8">
-                <h3 className="text-[clamp(1.6rem,2.8vw,2.2rem)] font-bold text-[#2c2c2c]">
+                <h3 className="text-[2.2rem] max-[900px]:text-[1.5rem] font-bold text-[#2c2c2c]">
                   {solution.title}
                 </h3>
-                <p className="mt-4 text-[1rem] leading-[1.7] text-[#4a4a4a]">
+                <p className="lg:mt-4 text-[1rem] leading-[1.7] text-[#4a4a4a]">
                   {solution.description}
                 </p>
               </div>
