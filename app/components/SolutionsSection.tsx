@@ -61,7 +61,7 @@ export default function SolutionsSection() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: `+=${panels.length * 100}vh`,
+          end: `+=${panels.length * 80}vh`,
           scrub: true,
           pin: true,
           invalidateOnRefresh: true,
@@ -124,9 +124,9 @@ export default function SolutionsSection() {
           {solutions.map((solution) => (
             <article
               key={solution.title}
-              className="solution-panel absolute inset-0 grid items-center gap-8 rounded-4xl bg-white p-6 max-[900px]:flex max-[900px]:flex-col-reverse lg:grid-cols-[1.05fr_1fr]"
+              className="solution-panel absolute inset-0 grid items-center gap-8 rounded-4xl bg-white max-[900px]:flex max-[900px]:flex-col-reverse lg:grid-cols-[1.05fr_1fr]"
             >
-              <div className="px-2 sm:px-6 lg:px-8">
+              <div className=" lg:px-8">
                 <h3 className="text-[clamp(1.6rem,2.8vw,2.2rem)] font-bold text-[#2c2c2c]">
                   {solution.title}
                 </h3>
@@ -134,7 +134,7 @@ export default function SolutionsSection() {
                   {solution.description}
                 </p>
               </div>
-              <div className="rounded-[28px] sm:p-8">
+              <div className="rounded-[28px] lg:p-8">
                 <div className="overflow-hidden rounded-[22px] bg-white/70">
                   <Image
                     src={solution.image}
