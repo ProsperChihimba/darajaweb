@@ -79,7 +79,7 @@ export default function IntoSection() {
         </h2>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-2">
-          <article className="grid gap-4 rounded-2xl bg-[#fbf6ef] transition-colors duration-200 hover:bg-[#A8C5A0] p-7 max-[900px]:p-5">
+          <article className="grid gap-4 rounded-2xl bg-[#fbf6ef] transition-colors duration-200 hover:bg-[#a8c5a022] p-7 max-[900px]:p-5">
             <div>
               <h3 className="text-xl font-bold">HRIS</h3>
               <p className="mt-2 text-sm leading-relaxed text-[#565656]">
@@ -108,7 +108,7 @@ export default function IntoSection() {
             </div>
           </article>
 
-          <article className="grid gap-4 rounded-2xl bg-[#fbf6ef] transition-colors duration-200 hover:bg-[#A8C5A0] p-7 max-[900px]:p-5">
+          <article className="grid gap-4 rounded-2xl bg-[#fbf6ef] transition-colors duration-200 hover:bg-[#a8c5a022] p-7 max-[900px]:p-5">
             <div>
               <h3 className="text-xl font-bold">Payroll management</h3>
               <p className="mt-2 text-sm leading-relaxed text-[#565656]">
@@ -139,7 +139,7 @@ export default function IntoSection() {
           </article>
         </div>
 
-        <article className="mt-6 grid gap-6 rounded-2xl bg-[#fbf6ef] transition-colors duration-200 hover:bg-[#A8C5A0] p-7 max-[900px]:p-5 lg:grid-cols-[1.1fr_1fr] lg:items-center">
+        <article className="mt-6 grid gap-6 rounded-2xl bg-[#fbf6ef] transition-colors duration-200 hover:bg-[#a8c5a022] p-7 max-[900px]:p-5 lg:grid-cols-[1.1fr_1fr] lg:items-center">
           <div>
             <h3 className="text-lg font-bold">Platform</h3>
             <p className="mt-2 text-sm leading-relaxed text-[#565656]">
@@ -179,7 +179,7 @@ export default function IntoSection() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
               href="/company"
-              className="inline-flex items-center !text-[#45dcbe] justify-center rounded-full bg-[#3c7f68] px-6 py-2 text-sm font-semibold text-white"
+              className="inline-flex items-center !text-[#4dcdf4] justify-center rounded-full bg-[#028589] px-6 pt-2 pb-[10px] text-sm font-semibold text-white"
             >
               Book a demo
             </Link>
