@@ -186,12 +186,12 @@ export default function SolutionsSection() {
     <section
       ref={sectionRef}
       id="solutions"
-      className="bg-white py-16 lg:pb-24 lg:pt-0"
+      className="bg-white  lg:pb-24 lg:pt-0"
     >
       <div className="mx-auto bg-amber-400 w-full lg:max-w-295 px-6">
         <h2
           ref={headerRef}
-          className="mx-auto max-w-3xl lg:mb-9 text-center text-[2.4rem] max-[900px]:text-[1.7rem] max-[900px]:mb-0 font-bold leading-[1.05] text-[#2c2c2c]"
+          className="mx-auto max-w-3xl lg:mb-9 text-center text-[2.4rem] max-[900px]:text-[1.7rem] max-[900px]:mb-9 font-bold leading-[1.05] text-[#2c2c2c]"
         >
           Solving People Management Challenges for MENA
         </h2>
