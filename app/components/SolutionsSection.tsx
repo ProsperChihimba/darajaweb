@@ -60,7 +60,7 @@ const SETTINGS = {
   // --- Panel motion ---
   panelOffsetIn: 40,       // px panels slide up from on entry
   panelOffsetOut: -20,     // px panels slide to on exit
-  
+
 };
 
 export default function SolutionsSection() {
@@ -197,13 +197,13 @@ export default function SolutionsSection() {
         </h2>
 
         <div
-          className="relative overflow-hidden"
+          className="relative "
           style={{ minHeight: "clamp(520px, 65vh, 720px)" }}
         >
           {solutions.map((solution) => (
             <article
               key={solution.title}
-              className="solution-panel absolute inset-0 grid items-center gap-8 bg-white max-[900px]:flex max-[900px]:flex-col-reverse lg:grid-cols-[1.05fr_1fr]"
+              className="solution-panel absolute inset-0 grid items-center gap-8  max-[900px]:flex max-[900px]:flex-col-reverse lg:grid-cols-[1.05fr_1fr]"
             >
               <div className="lg:px-8">
                 <h3 className="text-[clamp(1.6rem,2.8vw,2.2rem)] font-bold text-[#2c2c2c]">
