@@ -80,7 +80,7 @@ function RotateCard() {
 
           const smallFinalDesktop = {
             img1: { width: "130px", height: "130px", top: "-30px", left: "5%", zIndex: 30 },
-            img2: { width: "200px", height: "200px", top: "70px", left: "-30%", zIndex: 30 },
+            img2: { width: "200px", height: "200px", top: "70px", left: "-33%", zIndex: 30 },
             img3: { width: "130px", height: "130px", top: "80%", left: "3%", zIndex: 30 },
             img4: { width: "170px", height: "130px", top: "30%", left: "95%", zIndex: 40 },
             img5: { width: "150px", height: "200px", top: "-70px", left: "72%", zIndex: 30 },
