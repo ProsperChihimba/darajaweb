@@ -512,8 +512,8 @@ function RotateCard() {
         className="absolute top-1/2 transform -translate-y-1/2 mt-14 lg:mt-9 w-[90%] mx-auto text-center text-xs lg:text-lg z-50"
       >
         <p className="lg:max-w-105 text-center text-[#4b5847] mx-auto lg:mt-9">
-          Cercli unifies HR, payroll, and compliance for MENA teams, with
-          global-ready contractor support and real-time reporting.
+          Daraja brings expense requests, approvals, payouts, and compliance
+          documentation together in one workflow built for SMEs and startups.
         </p>
         <button className="bg-black rounded-xs mt-1 py-1 lg:py-2 px-3 text-center text-sm text-white">
           BOOK A DEMO

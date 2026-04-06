@@ -18,9 +18,9 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "Cercil - Revenue operations platform",
+  title: "Daraja - Expense management for SMEs and startups",
   description:
-    "Cercil unifies billing, usage, and renewals for modern revenue teams.",
+    "Daraja is the expense management and financial operations platform for SMEs and startups. Track spending, approve expenses in real time, and stay compliant.",
 };
 
 export default function RootLayout({
@@ -31,9 +31,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full [color-scheme:light]">
       <body
-        className={`${spaceGrotesk.variable} ${fraunces.variable} min-h-full bg-[#f6f1e7] text-[#1f1a14] font-[var(--font-sans)] antialiased`}
+        className={`${spaceGrotesk.variable} ${fraunces.variable} min-h-full bg-white text-[#0a0a0a] font-[var(--font-sans)] antialiased`}
       >
-        <div className="relative min-h-screen overflow-x-hidden before:fixed before:inset-0 before:-z-10 before:content-[''] before:bg-[radial-gradient(900px_600px_at_5%_-10%,rgba(255,245,224,0.8),transparent_60%),radial-gradient(800px_600px_at_90%_10%,rgba(199,228,221,0.6),transparent_55%),linear-gradient(180deg,rgba(255,250,240,0.6)_0%,rgba(246,241,231,0.9)_100%)]">
+        <div className="relative min-h-screen overflow-x-hidden before:fixed before:inset-0 before:-z-10 before:content-[''] before:bg-[radial-gradient(900px_600px_at_5%_-10%,rgba(245,245,244,0.9),transparent_60%),radial-gradient(800px_600px_at_90%_10%,rgba(238,238,236,0.7),transparent_55%),linear-gradient(180deg,#ffffff_0%,#fafafa_100%)]">
           <Header />
           <main>{children}</main>
           <Footer />

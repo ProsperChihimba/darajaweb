@@ -3,24 +3,24 @@ import StoriesCarousel from "./StoriesCarousel";
 const stories = [
   {
     quote:
-      "Cercli's customer support is excellent, providing quick responses. Their team has been incredibly responsive, ensuring that any issues are addressed promptly. This level of customer care has made a significant difference in our experience.",
-    name: "Said El Imadi",
-    role: "Human Resources Manager",
-    company: "Supy",
+      "Daraja replaced the spreadsheets and WhatsApp approvals we used to track expenses. Today every payment is logged with a clear reason, and our finance team finally has a real audit trail.",
+    name: "Operations Lead",
+    role: "Startup Customer",
+    company: "Swahilies",
   },
   {
     quote:
-      "Cercli helped us unify payroll and HR workflows across regions. We cut manual follow-ups, improved compliance visibility, and empowered managers with real-time insights.",
-    name: "Mariam Al-Khaled",
-    role: "People Operations Lead",
-    company: "Nexa",
+      "Most of our company spending now flows through Daraja. Being able to pay directly to Lipa Namba and have everything reconciled saves us hours every week.",
+    name: "Finance Manager",
+    role: "Startup Customer",
+    company: "Medikea",
   },
   {
     quote:
-      "The onboarding experience was smooth, and our teams felt supported at every step. Cercli delivered faster payroll cycles with clear reporting and local expertise.",
-    name: "Hassan Rahman",
-    role: "Finance Director",
-    company: "Lattice",
+      "We needed proper records for compliance without slowing the team down. Daraja made it simple — requests, approvals, and receipts all in one place.",
+    name: "Founder",
+    role: "Startup Customer",
+    company: "Neurotech",
   },
 ];
 

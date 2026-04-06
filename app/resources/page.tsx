@@ -2,40 +2,42 @@ import Link from "next/link";
 
 const collections = [
   {
-    title: "Revenue operations guides",
-    description: "Deep dives on renewal playbooks and usage pricing strategy.",
+    title: "Expense management guides",
+    description:
+      "Practical playbooks on expense control, accountability, and reducing leakage.",
   },
   {
     title: "Templates & checklists",
-    description: "Ready-to-use frameworks for monthly close and expansion.",
+    description:
+      "Ready-to-use frameworks for setting up approval flows and monthly reconciliation.",
   },
   {
-    title: "Benchmarks",
+    title: "Compliance resources",
     description:
-      "Compare your metrics to peer revenue teams and growth stages.",
+      "Understand TRA-ready documentation and what proper records look like for SMEs.",
   },
 ];
 
 const highlights = [
   {
-    title: "The modern revops blueprint",
+    title: "The SME expense control playbook",
     type: "Guide",
-    time: "15 min read",
+    time: "12 min read",
   },
   {
-    title: "Usage pricing rollout checklist",
+    title: "Setting up approval flows for a 10-person team",
     type: "Checklist",
     time: "Download",
   },
   {
-    title: "Renewal health scoring model",
-    type: "Template",
-    time: "8 min read",
+    title: "Lipa Namba payouts: what businesses need to know",
+    type: "Article",
+    time: "6 min read",
   },
   {
-    title: "Q4 revenue forecasting workshop",
-    type: "Webinar",
-    time: "40 min watch",
+    title: "Building TRA-ready records from day one",
+    type: "Guide",
+    time: "10 min read",
   },
 ];
 
@@ -44,15 +46,15 @@ export default function ResourcesPage() {
     <>
       <section className="py-[4.5rem] lg:py-24">
         <div className="mx-auto w-full max-w-[1180px] px-6">
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#0f6f61]">
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#0a0a0a]">
             Resources
           </p>
           <h1 className="font-[var(--font-display)] text-[clamp(2.4rem,4vw,3.8rem)] leading-[1.05] tracking-[-0.02em]">
-            Build your revenue playbook.
+            Practical guides for growing businesses.
           </h1>
           <p className="text-[#5c5851] text-[1.05rem] leading-[1.7] max-w-[42rem]">
-            Practical guides, templates, and benchmarks for modern revenue
-            teams.
+            Articles, templates, and resources to help SMEs and startups
+            tighten financial control without slowing the team down.
           </p>
         </div>
       </section>
@@ -61,7 +63,7 @@ export default function ResourcesPage() {
           {collections.map((item) => (
             <div
               key={item.title}
-              className="rounded-[1.25rem] border border-[#e2d8c8] bg-white p-6 shado-[0_16px_40px_-32px_rgba(24,18,10,0.5)]"
+              className="rounded-[1.25rem] border border-[#e5e5e5] bg-white p-6 shado-[0_16px_40px_-32px_rgba(24,18,10,0.5)]"
             >
               <h3 className="text-xl font-semibold">{item.title}</h3>
               <p className="mt-2 text-[#5c5851]">{item.description}</p>
@@ -71,14 +73,14 @@ export default function ResourcesPage() {
       </section>
       <section className="py-[4.5rem] lg:py-24">
         <div className="mx-auto w-full max-w-[1180px] px-6">
-          <div className="rounded-[1.25rem] border border-[#e2d8c8] bg-white p-6 shado-[0_16px_40px_-32px_rgba(24,18,10,0.5)]">
-            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#0f6f61]">
+          <div className="rounded-[1.25rem] border border-[#e5e5e5] bg-white p-6 shado-[0_16px_40px_-32px_rgba(24,18,10,0.5)]">
+            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#0a0a0a]">
               Highlights
             </p>
             {highlights.map((item) => (
               <div
                 key={item.title}
-                className="flex flex-col gap-2 border-b border-[#e2d8c8] py-5 last:border-b-0"
+                className="flex flex-col gap-2 border-b border-[#e5e5e5] py-5 last:border-b-0"
               >
                 <h3 className="text-lg font-semibold">{item.title}</h3>
                 <div className="flex gap-4 text-[0.85rem] text-[#5c5851]">
@@ -92,16 +94,17 @@ export default function ResourcesPage() {
       </section>
       <section className="py-[4.5rem] lg:py-24">
         <div className="mx-auto w-full max-w-[1180px] px-6">
-          <div className="relative overflow-hidden rounded-[2rem] bg-[linear-gradient(135deg,#0f6f61_0%,#0b5a50_55%,#f2aa67_140%)] p-10 text-white after:absolute after:-bottom-[40%] after:-right-[10%] after:h-[300px] after:w-[300px] after:rounded-full after:bg-[radial-gradient(circle,rgba(255,255,255,0.3),transparent_70%)] after:content-['']">
+          <div className="relative overflow-hidden rounded-[2rem] bg-[linear-gradient(135deg,#0a0a0a_0%,#171717_55%,#404040_140%)] p-10 text-white after:absolute after:-bottom-[40%] after:-right-[10%] after:h-[300px] after:w-[300px] after:rounded-full after:bg-[radial-gradient(circle,rgba(255,255,255,0.18),transparent_70%)] after:content-['']">
             <h2 className="font-[var(--font-display)] text-[clamp(2.4rem,4vw,3.8rem)] leading-[1.05] tracking-[-0.02em] text-white">
-              Need something specific?
+              Need help getting started?
             </h2>
             <p className="text-[1.05rem] leading-[1.7] text-white/80 max-w-[42rem]">
-              Our team can point you to the right framework in minutes.
+              Our team can show you how Daraja fits your specific business in
+              just a short call.
             </p>
             <div className="mt-6 flex flex-wrap gap-4">
               <Link
-                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#0b5a50] transition-colors hover:bg-white/85"
+                className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#0a0a0a] transition-colors hover:bg-white/85"
                 href="/company"
               >
                 Contact us

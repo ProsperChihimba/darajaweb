@@ -3,13 +3,13 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-// ─── Unique hover bg per nav item (custom hex, applied via inline style) ──────
+// ─── Unified neutral hover bg for every nav item ──────────────────────────────
 const NAV_HOVER_COLORS = {
-  Products: "#A8C5A0", // sage green
-  "Use Cases": "#C4917A", // blush rose
-  Resources: "#C9B99A", // sandy tan
-  Pricing: "#A8C5A0", // sage green
-  Company: "#7EB5C4", // dusty blue
+  Products: "#f0f0ee",
+  "Use Cases": "#f0f0ee",
+  Resources: "#f0f0ee",
+  Pricing: "#f0f0ee",
+  Company: "#f0f0ee",
 } as const;
 
 type NavLabel = keyof typeof NAV_HOVER_COLORS;
@@ -104,7 +104,7 @@ function NavTab({ label, hasDropdown }: NavTabProps) {
 }
 
 // ─── Main Header ──────────────────────────────────────────────────────────────
-export default function CercliHeader() {
+export default function DarajaHeader() {
   const [scrolled, setScrolled] = useState(false); // bg switches after 10 px
   const [hidden, setHidden] = useState(false); // slides away on scroll-down
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -141,7 +141,7 @@ export default function CercliHeader() {
     };
   }, [mobileOpen]);
 
-  const headerBg = mobileOpen ? "#bdb4ad" : scrolled ? "#ffffff" : "#fbf6ef";
+  const headerBg = mobileOpen ? "#ffffff" : scrolled ? "#ffffff" : "#fafafa";
 
   return (
     <>
@@ -156,41 +156,37 @@ export default function CercliHeader() {
                    duration-[380ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
       >
         {/* ── Announcement bar ─────────────────────────────────────────── */}
-        <div className="bg-[#1E1E1E] px-6 py-2.5 text-[#d8d8d8] text-[13px] font-medium tracking-tight">
+        <div className="bg-black px-6 py-4 text-[#d8d8d8] text-[13px] font-medium tracking-tight">
           <div className="hidden sm:flex items-center justify-center gap-2.5">
             <span>
-              Cercli raises{" "}
+              New: Daraja now supports direct{" "}
               <strong className="text-white font-semibold">
-                $12M Series A
+                Lipa Namba payouts
               </strong>{" "}
-              led by{" "}
-              <strong className="text-white font-semibold text-[12px] tracking-[0.07em]">
-                P↑CUS CAPITAL
-              </strong>
+              for businesses across Tanzania
             </span>
 
             <button
               className="inline-flex items-center gap-1.5
-                             bg-[#A8C5A0] hover:bg-[#91b88a]
-                             text-[#1a1a1a] font-semibold text-[12.5px]
+                             bg-white hover:bg-[#e5e5e5]
+                             text-[#0a0a0a] font-semibold text-[12.5px]
                              rounded-full pl-3 pr-2.5 py-[3px]
                              border-none cursor-pointer transition-colors duration-200"
             >
-              Read more
+              Learn more
               <ArrowIcon />
             </button>
           </div>
           <div className="sm:hidden flex flex-col items-center gap-1 text-center">
             <span>
-              Cercli raises{" "}
+              Daraja now supports{" "}
               <strong className="text-white font-semibold">
-                $12M Series A
-              </strong>{" "}
-              led by
+                Lipa Namba payouts
+              </strong>
             </span>
             <div className="inline-flex items-center gap-2 text-white font-semibold text-[12px] tracking-[0.14em]">
-              <span>P↑CUS CAPITAL</span>
-              <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#A8C5A0] text-[#1a1a1a]">
+              <span>LEARN MORE</span>
+              <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white text-[#0a0a0a]">
                 <ArrowIcon />
               </span>
             </div>
@@ -200,15 +196,22 @@ export default function CercliHeader() {
         {/* ── Nav row ──────────────────────────────────────────────────── */}
         <div className="flex items-center justify-between px-5 py-3 sm:px-8 sm:py-2.5 gap-4">
           {/* Logo */}
-          <a href="/" aria-label="Cercli" className="flex-shrink-0">
+          <a
+            href="/"
+            aria-label="Daraja"
+            className="flex-shrink-0 inline-flex items-center gap-2"
+          >
             <Image
-              src="/assets/images/logo.png"
-              alt="Cercli logo"
-              width={140}
+              src="/assets/images/logo.svg"
+              alt="Daraja logo"
+              width={40}
               height={40}
-              className="h-[36px] w-auto"
-              priority={true}
+              className="h-10 w-10"
+              priority
             />
+            {/* <span className="text-[1.45rem] font-bold tracking-tight text-[#0a0a0a]">
+              Daraja
+            </span> */}
           </a>
 
           {/* Mobile menu toggle */}
@@ -269,16 +272,17 @@ export default function CercliHeader() {
           {/* CTA buttons */}
           <div className="hidden lg:flex items-center gap-2.5 flex-shrink-0">
             <button
-              className="bg-[#C9B99A] hover:bg-[#b8a585] hover:-translate-y-px
-                               text-[#1a1a1a] font-semibold text-sm tracking-tight
-                               rounded-full px-5 py-2.5 border-none cursor-pointer
+              className="bg-white hover:bg-[#f0f0ee] hover:-translate-y-px
+                               text-[#0a0a0a] border border-[#e5e5e5]
+                               font-semibold text-sm tracking-tight
+                               rounded-full px-5 py-2.5 cursor-pointer
                                transition-all duration-200"
             >
               Log in
             </button>
 
             <button
-              className="bg-[#1a1a1a] hover:bg-[#2e2e2e] hover:-translate-y-px
+              className="bg-[#0a0a0a] hover:bg-[#262626] hover:-translate-y-px
                                text-white font-semibold text-sm tracking-tight
                                rounded-full px-5 py-2.5 border-none cursor-pointer
                                transition-all duration-200"
@@ -332,7 +336,7 @@ export default function CercliHeader() {
             <div className="grid gap-3">
               <button
                 type="button"
-                className="w-full rounded-full bg-[#d9c3a0] py-3 text-sm font-semibold text-[#2b2b2b] shadow-[0_10px_20px_-14px_rgba(0,0,0,0.3)]"
+                className="w-full rounded-full bg-white border border-[#e5e5e5] py-3 text-sm font-semibold text-[#0a0a0a] shadow-[0_10px_20px_-14px_rgba(0,0,0,0.3)]"
               >
                 Log in
               </button>

@@ -4,25 +4,25 @@ import Link from "next/link";
 const resources = [
   {
     image: "/assets/images/image18.avif",
-    date: "Oct 21, 2025",
+    date: "Mar 04, 2026",
     title:
-      "Cercli Raises $12M Series A for AI-Native Workforce Platform, Marking Picus Capital's First MENA Investment",
+      "Why SMEs Lose Money Silently — and How Better Expense Controls Stop It",
     description:
-      "Picus Capital's first Middle East & North Africa investment signals major VC confidence in MENA tech ecosystem.",
+      "Informal, receipt-free transactions make it easy for small businesses to lose track of spending. Here is how proper expense workflows fix it.",
   },
   {
     image: "/assets/images/image19.avif",
-    date: "Aug 18, 2025",
-    title: "Cercli Grows Rapidly as it Replaces Legacy ERP Systems",
+    date: "Feb 12, 2026",
+    title: "Lipa Namba Payouts: A Better Way to Pay Business Suppliers",
     description:
-      "Cercli is the MENA HR platform replacing legacy ERP systems. With 22% monthly growth, 48-country payroll, and AI-powered HR, it helps Middle East companies scale globally.",
+      "Daraja is the only platform letting businesses pay directly to mobile money merchant accounts (Lipa Namba) — with proper documentation by default.",
   },
   {
     image: "/assets/images/image20.avif",
-    date: "Jun 30, 2025",
-    title: "What's New at Cercli: Product Updates for June 2025",
+    date: "Jan 18, 2026",
+    title: "Building TRA-ready Records From Day One",
     description:
-      "Cercli's June 2025 updates: automate compliant offboarding, manage and track assets, sync time off with your calendar, and generate salary certificates in one HRIS for MENA.",
+      "Compliance does not have to slow you down. Learn how Daraja generates digital records that support TRA-compliant documentation automatically.",
   },
 ];
 

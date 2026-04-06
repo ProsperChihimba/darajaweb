@@ -7,44 +7,44 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 // ─── Data ─────────────────────────────────────────────────────────────────────
 const FOOTER_COLS = [
   {
-    heading: "HRIS",
+    heading: "Expense Management",
     links: [
-      "People Management",
-      "Compensation Management",
-      "Leave Management",
-      "Onboarding",
-      "Documents",
-      "Assets Management",
+      "Expense Requests",
+      "Real-time Approvals",
+      "Receipt Capture",
+      "Audit Trail",
+      "Role-based Access",
+      "Spend Reports",
     ],
   },
   {
-    heading: "Payroll management",
+    heading: "Payouts",
     links: [
-      "Local Payroll",
-      "Remote contractors",
-      "Employer of record",
-      "Expense reimbursements",
+      "Mobile Money",
+      "Bank Transfers",
+      "Lipa Namba (Merchant)",
+      "Auto Reconciliation",
     ],
   },
   {
-    heading: "Recruitment",
-    links: ["Applicant Tracking System"],
+    heading: "Compliance",
+    links: ["TRA-ready Documentation"],
   },
   {
     heading: "Use Cases",
     links: [
-      "Hire anyone anywhere in the world",
-      "Enter the MENA market",
-      "Expand Worldwide from MENA",
+      "Startups in Tanzania",
+      "Growing SMEs",
+      "Foreign companies in Tanzania",
     ],
   },
   {
     heading: "Company",
     links: [
-      "Cercli Platform",
-      "About Us",
+      "About Daraja",
+      "Our Partners",
       "Careers",
-      "Partner with us",
+      "Contact",
       "Resources",
       "Pricing",
     ],
@@ -65,24 +65,16 @@ const BADGES = [
 ];
 
 // ─── Social Icons ─────────────────────────────────────────────────────────────
-export default function CercliFooter() {
+export default function DarajaFooter() {
   return (
     <>
-      <footer className="relative w-full min-h-[520px] overflow-hidden">
-        <Image
-          src="/assets/images/image21.webp"
-          alt=""
-          fill
-          sizes="100vw"
-          className="absolute inset-0 h-full w-full object-cover"
-          priority={false}
-        />
-        {/* ── Top fade: light sky blends into transparent so image shows below ── */}
+      <footer className="relative w-full min-h-[520px] overflow-hidden bg-[#0a0a0a]">
+        {/* ── Subtle radial highlight to keep the dark footer from feeling flat ── */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(235,242,248,0.97) 0%, rgba(235,242,248,0.93) 30%, rgba(235,242,248,0.55) 52%, transparent 68%)",
+              "radial-gradient(800px 400px at 80% 0%, rgba(255,255,255,0.06), transparent 60%)",
           }}
         />
 
@@ -90,13 +82,17 @@ export default function CercliFooter() {
         <div className="relative z-10 max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-10">
           {/* ── Logo ── */}
           <div className="pt-10 pb-8 sm:pt-12 sm:pb-10">
-            <a href="/" aria-label="Cercli">
+            <a
+              href="/"
+              aria-label="Daraja"
+              className="inline-flex items-center gap-2"
+            >
               <Image
-                src="/assets/images/logo.png"
-                alt="Cercli logo"
-                width={140}
-                height={40}
-                className="h-[40px] w-auto"
+                src="/assets/images/logo_white.svg"
+                alt="Daraja logo"
+                width={44}
+                height={44}
+                className="h-11 w-11"
                 priority={false}
               />
             </a>
@@ -107,7 +103,7 @@ export default function CercliFooter() {
             {FOOTER_COLS.map((col) => (
               <div key={col.heading} className="flex flex-col gap-0">
                 {/* Column heading */}
-                <p className="text-[#1a1a1a] font-semibold text-[14px] tracking-tight mb-5">
+                <p className="text-white font-semibold text-[14px] tracking-tight mb-5">
                   {col.heading}
                 </p>
                 {/* Links */}
@@ -116,7 +112,7 @@ export default function CercliFooter() {
                     <a
                       key={link}
                       href="#"
-                      className="text-[#5a5a5a] hover:text-[#1a1a1a] text-[14px]
+                      className="text-white/60 hover:text-white text-[14px]
                                  no-underline transition-colors duration-150 tracking-tight leading-snug"
                     >
                       {link}
@@ -141,14 +137,14 @@ export default function CercliFooter() {
                     key={label}
                     href="#"
                     aria-label={label}
-                    className="w-[48px] h-[48px] rounded-lg bg-transparent flex items-center justify-center text-black/60 hover:text-black transition-colors duration-200"
+                    className="w-[48px] h-[48px] rounded-lg bg-transparent flex items-center justify-center text-white/60 hover:text-white transition-colors duration-200"
                   >
                     {icon}
                   </a>
                 ))}
               </div>
-              <p className="text-[#3a3a3a] text-[13px] tracking-tight">
-                &copy; 2025 Cercli. All rights reserved.
+              <p className="text-white/50 text-[13px] tracking-tight">
+                &copy; 2026 Daraja Technologies Limited. All rights reserved.
               </p>
             </div>
 
@@ -158,7 +154,7 @@ export default function CercliFooter() {
                 <a
                   key={link}
                   href="#"
-                  className="text-[#3a3a3a] hover:text-[#1a1a1a] text-[14px]
+                  className="text-white/60 hover:text-white text-[14px]
                              no-underline transition-colors duration-150 tracking-tight"
                 >
                   {link}
@@ -168,7 +164,7 @@ export default function CercliFooter() {
 
             {/* Right: badges */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3">
-              {BADGES.map((badge) => (
+              {/* {BADGES.map((badge) => (
                 <Image
                   key={badge.src}
                   src={badge.src}
@@ -177,7 +173,47 @@ export default function CercliFooter() {
                   height={54}
                   className="h-[48px] w-[48px] sm:h-[54px] sm:w-[54px] object-contain"
                 />
-              ))}
+              ))} */}
+            </div>
+          </div>
+        </div>
+
+        {/* ── Regulatory disclosure with oversized background watermark ── */}
+        <div className="relative border-t border-white/10">
+          {/* Giant background watermark — overflows the right edge intentionally */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end overflow-hidden"
+          >
+            <span
+              className="block select-none whitespace-nowrap font-bold leading-[0.85] text-white/[0.05] -mb-[1.5vw] pl-6 sm:pl-10"
+              style={{ fontSize: "clamp(7rem, 19vw, 20rem)" }}
+            >
+              Spend with control
+            </span>
+          </div>
+
+          {/* Foreground content */}
+          <div className="relative z-10 max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-10 py-12 lg:py-16">
+            <div className="grid gap-6 lg:grid-cols-[auto_1fr] lg:items-start lg:gap-10">
+              <Image
+                src="/assets/images/logo_white.svg"
+                alt="Daraja"
+                width={40}
+                height={40}
+                className="h-10 w-10"
+              />
+              <p className="max-w-[68rem] text-[14px] leading-[1.7] text-white/70">
+                Daraja is a financial technology company, not a bank. Banking
+                services are provided through our licensed PSP partners.
+                Customer funds are held with Ecobank via our partnership with
+                Temboplus Company Limited. Mobile money merchant payouts (Lipa
+                Namba) are processed through Selcom. Daraja Technologies
+                Limited is registered in Tanzania. Every business payment
+                generates digital records to support TRA-compliant
+                documentation. Copyright &copy; Daraja Technologies Limited.
+                2026.
+              </p>
             </div>
           </div>
         </div>

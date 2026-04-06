@@ -29,7 +29,7 @@ export default function FaqSection({ items }: FaqSectionProps) {
       <div className="mx-auto w-full max-w-[1180px] px-6">
         <div className="mb-11 text-center">
           <h2 className="mx-auto max-w-3xl text-[clamp(2.4rem,4vw,3.8rem)] font-bold leading-[1.05] tracking-[-0.02em] max-[900px]:text-[2rem]">
-            Global HR System: Frequently Asked Questions
+            Daraja: Frequently Asked Questions
           </h2>
         </div>
         <div className="mx-auto grid max-w-[820px] gap-5">
@@ -48,7 +48,7 @@ export default function FaqSection({ items }: FaqSectionProps) {
                   borderRadius: "1.5rem",
                   border: "1px solid",
                   borderColor: isExpanded ? "#e2e2e2" : "#efefef",
-                  backgroundColor: isExpanded ? "#d9efc5" : "#ffffff",
+                  backgroundColor: isExpanded ? "#f5f5f4" : "#ffffff",
                   boxShadow: isExpanded
                     ? "0 18px 40px -30px rgba(20,20,20,0.25)"
                     : "0 12px 30px -26px rgba(20,20,20,0.18)",

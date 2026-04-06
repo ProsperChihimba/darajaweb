@@ -10,27 +10,27 @@ gsap.registerPlugin(ScrollTrigger);
 
 const solutions = [
   {
-    title: "Multi-Country, Multi-Entity",
+    title: "Stop Expense Leakage",
     description:
-      "Stay compliant across borders with HRIS and payroll workflows tailored to local labor laws, leave policies, and regulations, ensuring seamless operations across offices and entities.",
+      "Capture every business payment with the who, why, and where. Receipt-free transactions and inflated costs become a thing of the past once spending lives in one transparent system.",
     image: "/assets/images/image5.webp",
   },
   {
-    title: "Localized Payroll, Simplified",
+    title: "Pay Out to Lipa Namba, Mobile Money & Banks",
     description:
-      "Automate payroll cycles, approvals, and statutory reporting with built-in local requirements, reducing manual tasks while improving accuracy and visibility.",
+      "Disburse approved funds directly to verified merchant accounts (Lipa Namba), mobile money wallets, or business bank accounts — all from one workflow.",
     image: "/assets/images/image6.webp",
   },
   {
-    title: "Fast, Compliant Onboarding",
+    title: "Approvals That Match How You Work",
     description:
-      "Launch new hires quickly with guided onboarding, document collection, and compliance checks, all in one streamlined flow.",
+      "Employees submit expense requests, admins review and approve in real time, and every step is logged. No more chasing receipts on WhatsApp or paper.",
     image: "/assets/images/image7.webp",
   },
   {
-    title: "Actionable People Insights",
+    title: "TRA-ready Documentation by Default",
     description:
-      "Centralize people data and reporting to help teams make better workforce decisions with confidence and clarity.",
+      "Every payment generates a digital record that supports TRA-compliant documentation — so you reduce penalties, build credit history, and stay audit-ready.",
     image: "/assets/images/image8.webp",
   },
 ];
@@ -193,7 +193,7 @@ export default function SolutionsSection() {
           ref={headerRef}
           className="mx-auto max-w-3xl lg:mb-9 text-center text-[2.4rem] max-[900px]:text-[1.7rem] max-[900px]:mb-16 font-bold leading-[1.05] text-[#2c2c2c]"
         >
-          Solving People Management Challenges for MENA
+          Solving Real Expense Challenges for SMEs and Startups
         </h2>
 
         <div

@@ -2,30 +2,29 @@ import FaqSection from "./FaqSection";
 
 const faqs = [
   {
-    question: "Who can use Cercli? Is it only for MENA-based companies?",
+    question: "Who is Daraja built for?",
     answer:
-      "Cercli supports global teams hiring in and beyond MENA. You can manage local employees, contractors, and cross-border payroll from one platform.",
+      "Daraja is built for SMEs and startups with roughly 2 to 50 employees that make frequent business payments through mobile money or bank transfer. If your team has outgrown founder-only spending and needs proper expense control, Daraja is for you.",
   },
   {
-    question: "What makes Cercli different from other payroll and HR platforms?",
+    question: "How is Daraja different from a bank or mobile money app?",
     answer:
-      "Cercli is built for MENA compliance first, with localized payroll, HR, and benefits in a single system. It consolidates onboarding, payroll, and workforce management into a fast, guided workflow with responsive local support.",
+      "Banks are built for large merchants and bigger transfers. Mobile money apps are built for individuals first, which leaves SMEs mixing personal and business spending. Daraja is built specifically for businesses — and is currently the only platform that lets you pay out directly to mobile money merchant accounts (Lipa Namba).",
   },
   {
-    question:
-      "Does Cercli support WPS, DEWS, GOSI, and other MENA-specific compliance requirements?",
+    question: "Can I pay directly to Lipa Namba with Daraja?",
     answer:
-      "Yes. Cercli provides built-in coverage for MENA compliance programs, statutory reporting, and regulatory updates so payroll stays audit-ready.",
+      "Yes. Through our partnership with Selcom, businesses can disburse approved funds directly to verified merchant accounts (Lipa Namba), in addition to mobile money wallets and business bank accounts.",
   },
   {
-    question: "Can Cercli handle both local employees and international contractors?",
+    question: "How does Daraja help with TRA compliance?",
     answer:
-      "Absolutely. Cercli centralizes payroll for local employees while supporting contractor payments and documentation in the same workspace.",
+      "Every payout generates a digital record showing who spent the money, why, and where it went. These records support TRA-compliant documentation by default — reducing penalties and building the financial history you need to access credit.",
   },
   {
-    question: "How long does onboarding and implementation take?",
+    question: "How does pricing work?",
     answer:
-      "Most teams go live in a few weeks. We migrate your payroll data, validate compliance, and configure approvals with a dedicated launch team.",
+      "Daraja charges a transaction fee of 1% to 3% on each transaction processed, depending on the size. There are no large upfront subscriptions — you only pay as your business uses the platform.",
   },
 ];
 
