@@ -9,6 +9,12 @@
   }
 }
 
+@keyframes flow-shift {
+  to {
+    background-position: 200% center;
+  }
+}
+
 /* Hide scrollbars globally */
 * {
   scrollbar-width: none; /* Firefox */

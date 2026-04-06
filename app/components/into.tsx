@@ -1,5 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+  FaArrowRightArrowLeft,
+  FaRegFileLines,
+  FaCheck,
+  FaShieldHalved,
+} from "react-icons/fa6";
 
 const partners = [
   { src: "/assets/images/medikea.png", alt: "Medikea" },
@@ -114,15 +120,142 @@ export default function IntoSection() {
                 automatically reconciled as proof of fund flow.
               </p>
             </div>
-            <div className="overflow-hidden">
-              <Image
-                src="/assets/images/image2.webp"
-                alt="Payouts and reconciliation overview"
-                width={860}
-                height={480}
-                className="h-auto w-full"
-              />
+
+            {/* ── Payout Processing component ── */}
+            <div className="overflow-hidden rounded-[20px] border border-slate-200 bg-white shadow-[0_4px_20px_-2px_rgba(0,0,0,0.05)]">
+              {/* Top status bar */}
+              <div className="flex items-center justify-between border-b border-slate-100 bg-slate-50/60 px-5 py-3">
+                <div className="flex items-center gap-2">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-60" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+                  </span>
+                  <span className="text-[12px] font-medium text-slate-600">
+                    Processing Transfer
+                  </span>
+                </div>
+                <span className="font-mono text-[11px] text-slate-400">
+                  ID: TXN-99281A
+                </span>
+              </div>
+
+              {/* Main flow area */}
+              <div className="px-5 py-6">
+                <div className="relative flex items-center justify-between gap-3">
+                  {/* FROM */}
+                  <div className="z-10 flex w-[30%] flex-col items-start">
+                    <div className="mb-3 flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-slate-200">
+                      <Image
+                        src="/assets/images/swahilies-mark.png"
+                        alt="Swahilies"
+                        width={48}
+                        height={48}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">
+                      From
+                    </p>
+                    <h4 className="text-[13px] font-bold text-slate-900">
+                      Swahilies Inc
+                    </h4>
+                    <p className="text-[11px] text-slate-500">
+                      Operations Wallet
+                    </p>
+                  </div>
+
+                  {/* Flow line + amount */}
+                  <div className="relative flex flex-1 items-center justify-center">
+                    <div
+                      className="absolute left-0 right-0 top-1/2 h-[2px] -translate-y-1/2 rounded-full opacity-40"
+                      style={{
+                        background:
+                          "linear-gradient(90deg, #E2E8F0 0%, #10B981 50%, #E2E8F0 100%)",
+                        backgroundSize: "200% auto",
+                        animation: "flow-shift 2s linear infinite",
+                      }}
+                    />
+                    <div className="relative z-10 inline-flex items-center gap-2 rounded-full border border-emerald-100 bg-white px-3 py-1.5 shadow-sm">
+                      <div className="flex h-6 w-6 items-center justify-center rounded-full bg-emerald-50 text-emerald-600">
+                        <FaArrowRightArrowLeft className="h-2.5 w-2.5" />
+                      </div>
+                      <div className="flex flex-col">
+                        <span className="text-[8px] font-bold uppercase leading-none tracking-widest text-emerald-600">
+                          Amount
+                        </span>
+                        <span className="text-[13px] font-bold leading-tight text-slate-900">
+                          TZS 450,000
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* TO */}
+                  <div className="z-10 flex w-[30%] flex-col items-end">
+                    <div className="mb-3 flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
+                      <Image
+                        src="/assets/images/tanzanite.png"
+                        alt="Tanzanite Properties"
+                        width={48}
+                        height={48}
+                        className="h-full w-full object-contain p-1"
+                      />
+                    </div>
+                    <p className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">
+                      To Merchant
+                    </p>
+                    <h4 className="text-[13px] font-bold text-slate-900">
+                      Tanzanite Properties
+                    </h4>
+                    <p className="font-mono text-[11px] text-slate-500">
+                      Lipa Namba 1234567
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Transaction details grid */}
+              <div className="grid grid-cols-2 gap-4 border-t border-slate-100 bg-slate-50 px-5 py-4 sm:grid-cols-4">
+                {[
+                  { label: "Date", value: "Apr 06, 2026" },
+                  { label: "Time", value: "14:30 EAT" },
+                  { label: "Fee", value: "TZS 0.00" },
+                  { label: "Network", value: "Selcom Pay" },
+                ].map((row) => (
+                  <div key={row.label}>
+                    <p className="mb-0.5 text-[10px] text-slate-400">
+                      {row.label}
+                    </p>
+                    <p className="text-[12px] font-medium text-slate-700">
+                      {row.value}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Footer utilities */}
+              <div className="flex flex-wrap items-center justify-between gap-3 border-t border-slate-100 px-5 py-4">
+                <div className="flex items-center gap-2 text-[12px] font-medium text-slate-600">
+                  <FaRegFileLines className="h-3.5 w-3.5 text-slate-400" />
+                  Receipt #R-2845
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="inline-flex items-center gap-1 rounded-full border border-emerald-100 bg-emerald-50 px-2.5 py-1">
+                    <FaCheck className="h-2 w-2 text-emerald-600" />
+                    <span className="text-[10px] font-semibold text-emerald-700">
+                      Auto-matched
+                    </span>
+                  </span>
+                  <span className="inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-100 px-2.5 py-1">
+                    <FaShieldHalved className="h-2 w-2 text-slate-500" />
+                    <span className="text-[10px] font-semibold text-slate-600">
+                      TRA-ready
+                    </span>
+                  </span>
+                </div>
+              </div>
             </div>
+
             <div className="flex flex-wrap gap-2">
               {payoutTags.map((tag) => (
                 <span
